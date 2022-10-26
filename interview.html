@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <titl>50 important tricky question</title>
+</head>
+<body>
+    <script>
+        // 1. guess output
+       /*  function fruit(){
+            console.log(name)
+            console.log(Price)
+
+            var name = "apple";
+            let price = 20;
+        }
+        fruit() */
+
+        // 13-undefined, 14-error
+        // because at memorty creation phase in global execution context the var is hoisted as undefined whereas let const are hoisted but they are uninitialized.
+    </script>
+    <script>
+        //2
+        /* for(var i=0;i<3;i++){
+            setTimeout(()=>console.log(i),1)
+        } */
+
+        //26. 3 times "3"
+        //because setTimeout is the asynchronous feature of js provided by the browser beofre it execute as we know var in undefined and the loop is fininsed before the setTimout come so value of i becomes 3 so 3 is output of this code.
+    </script>
+
+    <script>
+        //3
+         /* for(let i=0;i<=3;i++){
+            setTimeout(()=>console.log(i),1)
+        } */ 
+
+        // output:0 1 2
+        //because let is unsinitalized before it execute and belongs to the block scope
+    </script>
+
+    <script>
+        //4
+/*         console.warn(+true);
+        console.warn(typeof +true)
+ */
+        // output1: 1 output2: number
+        //+ converted boolean into number and type is number
+    </script>
+
+    <script>
+        //5
+/*         console.log(!"ausis");
+        console.log(typeof("ausis"))
+ */
+        //output1: false output2: string
+        //negotation of string is false 
+    </script>
+
+    <script>
+        //6
+/*         let data = "size";
+        const bird = {
+            size:"small",
+        }
+        console.warn(bird[data])
+        console.warn(bird["size"])
+        console.warn(bird.size)
+        console.warn(bird.data)
+ */
+    //op1: small small small undefined
+    // data becomes the key , another form of object key execute bird, another mehthod of making key
+    </script>
+
+    <script>  
+        //7
+/*         let c = {name:"peter"};
+        let d;
+
+        d = c;
+        c.name = "anil";
+        console.log(d.name);
+ */
+        //op: anil
+        //object is the reference data type if we change one place it changes everywhere
+
+    </script>
+
+    <script>  
+        //8
+/*         var x;
+        var x=10;
+        console.log(x);
+*/
+       //op: 10;
+       //var can be modified.
+       
+       </script>
+
+<script>  
+        //9
+/*        var x;
+       let x=10;
+       console.log(x);
+ */
+    //    op: error (already decleared)
+    // var is global scope and let is blockscope and let doesn't allow x in this way.
+    </script>
+
+    <script>  
+        //10
+/*         let a = 3;
+        let b = new Number(3)
+
+        console.log(a==b)
+        console.log(a===b)
+ */
+        // op: true false
+        // datatypes are different number , obj
+
+    </script>
+
+    <script>  
+        //11
+/*         let name;
+        nmae:{}; //!typo
+        console.log(name)
+ */
+        // op: undefined
+        // treaded as completely different variable
+
+    </script>
+
+    <script>  
+        //12
+/*         function fruit(){
+            console.log("foo");
+        }
+
+        fruit.name = "apple"
+
+        fruit()
+ */
+        // op: foo
+        // the extra property doesn't have any impact on it.
+
+    </script>
+
+    <script>  
+        //13
+/*         function sum(a,b){
+            return a+b;
+        }
+
+        console.log(sum(1,"2"))
+ */
+        // op: 12
+        // both are treated as string due to string if a is string then both concatenate
+
+    </script>
+
+    <script>  
+        //14
+/*         let number =0;
+        console.log(number++);
+        console.log(++number);
+        console.log(number)
+ */
+        //op 0 2 2
+        // o output and increment becomes 1> 1 increment and becomes 2 and output 2 > the number becomes 2 so 2 
+    </script>
+
+    <script>  
+        //15
+        // function getAge(...args){
+        //     console.log(typeof args)
+        // }
+
+        // getAge(21);
+        
+        // op: Object
+        // but basically it is an array
+
+        
+    </script>
+
+    <script>  
+    //16
+        // function getAge(){
+        //     'use strict'
+        //     age = 21;
+        //     console.log(age)
+        // }
+        // getAge();
+
+        // op : error 
+        //  we cannot use the age without declearing scope after using strict 
+
+    </script>
+
+    <script>  
+        //17
+/*         const sum = eval("10*10+5");
+        console.log(sum)
+ */
+        // op : 105
+        // eval basically convert string into numberic values then evaluate it.
+
+    </script>
+
+    <script>  
+        //18
+        // How long is cool_secret accessible?
+        // sessionStorage.setItem('cool_secret',123);
+
+    </script>
+
+    <script>  
+        //19
+/*         const obj = {1:"a", "num two":"b", 3:"c"}
+        console.log(obj.hasOwnProperty("1"))
+        console.log(obj.hasOwnProperty(1))
+ */
+        //op true true
+        // both is executed like obj.hasOwnProperty("num two")
+
+
+    </script>
+
+    <script>  
+        //20
+        // const obj = {a:"one", b:"two", a:"repeat"}
+        // console.log(obj)
+
+        // op  {a:"repeat", b:"two"}
+        // basically the value is overwrite but the address is samew;
+
+    </script>
+
+    <script>  
+        //21
+/*         for(let i=1;i<5;i++){
+            if(i===3) continue;
+            console.log(i)
+        }
+ */        
+        // op: 1 2 4
+
+    </script>
+
+    <script>  
+        //22
+/*         const foo = () => console.log("first")
+        const bar = () => setTimeout(()=> console.log("second"))
+        const baz = () => console.log("third")
+
+        bar();
+        foo();
+        baz();
+ */
+        // op : first third second
+        // setTimeout execute at last due to event loop
+
+    </script>
+
+    <!-- 23 -->
+<!--     <div>
+        <div onclick="console.log('first day')" >
+            <div onclick="console.log('second day')">
+                <button onclick="console.log('btn')">Click</button>
+            </div>
+        </div>
+    </div>
+ -->    
+    <script>  
+        //24
+/*         const person = {name: 'Lydia'};
+        function sayHi(age){
+            return `${this.name} is ${age}`
+        }
+
+        console.log(sayHi.call(person,21))
+        console.log(sayHi.bind(person,21))
+ */
+        
+        //op Lydia is 21, function
+        // call method call but bind method call and make it function
+    </script>
+
+    <script>  
+        //25 
+/*         function sayHi(){
+            return (()=> 0)();
+        }
+        console.log(typeof sayHi())
+ */
+        //number
+        //immediate call after callback make it 0 and 0 is by default number
+    </script>
+
+    <script>  
+        //26
+/*         function sayHi(){
+            return (()=> 0);
+        }
+        console.log(typeof sayHi()())
+ */
+        // op same as before
+    </script>
+
+    <script>  
+        //27
+        // console.log(typeof typeof 1)
+
+    </script>
+
+    <script>  
+        //28
+/*         const number = [1,2,3];
+        number[9] = 21;
+        console.log(number)
+ */
+        // op [1, 2, 3, empty × 6, 21]
+        // empty value is also showed 
+    </script>
+from 40 min video remaining
+    <script>  
+        //
+
+    </script>
+
+    <script>  
+        //
+
+    </script>
+
+    <script>  
+        //
+
+    </script>
+
+    <script>  
+        //
+
+    </script>
+
+    <script>  
+        //
+
+    </script>
+
+    <script>  
+        //
+
+    </script>
+
+    <script>  
+        //
+
+    </script>
+
+    <script>  
+        //
+
+    </script>
+
+    <script>  
+        //
+
+    </script>
+
+    <script>  
+        //
+
+    </script>
+
+
+
+
+
+</body>
+</html>
