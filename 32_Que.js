@@ -1,0 +1,1 @@
+// Given an array Arr of size N, print all its elements.

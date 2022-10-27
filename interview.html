@@ -393,23 +393,144 @@
         //type of 3 and 4becomes string and concate with string 5
 
     </script>
-<a  href="https://www.youtube.com/watch?v=riloPTtAuAM&ab_channel=CodeStepByStep">click me</a>
+
     <script>  
         //36
+        // console.log([]==[])
+
+        // explanation: if we compare two arrays its always false
 
     </script>
 
     <script>  
-        //
+        //37
+/*         let data = [1,2,3].map(num=> {
+            if(typeof num==='number') return;
+            return num*2;
+        })
+        console.warn(data)
+ */
+        // op ; [undefined, undefined, undefined]
 
     </script>
 
     <script>  
-        //
+        //38 
+/*         function getInfo(member){
+            member.name = 'Ausis';
+        }
+
+        const person = {name: 'Sarah'}
+
+        getInfo(person);
+
+        console.log(person)
+ */
+        //op : Ausis
+        // objec is passes as parameter and it uses the reference so "Sarah is updated to Ausis"
 
     </script>
 
+    <script>  
+        //39
+/*         function Car(){
+            this.make = "tata";
+            return{make:"kia"}
+        }
 
+        const myCar = new Car();
+        console.log(myCar.make)
+ */
+        //op kia
+        // if we returning something exactly property then the value is overwrite in this case kia is overwrite the tata
+
+    </script>
+
+    <script>  
+        //40
+/*         (()=> {
+            let x = (y=10);
+        })();
+
+        console.log(typeof x)
+ */
+        //let is block scope so output is undefined
+
+    </script>
+
+    <script>  
+/*         //41
+        (()=> {
+            let x = y = 10;
+        })()
+
+        console.log(typeof y)
+ */
+        //number
+        // its not let x and let y its let x  and y or var y
+        // which is global scope 
+
+    </script>
+
+    <script>  
+        //42
+/*         (()=> {
+            let x =10;
+        })();
+
+        (()=> {
+            let x = 10;
+        })();
+
+        console.log(x)
+ */        
+        //error
+        // let is blockscope
+
+    </script>
+
+    <script>  
+        //43
+/*         (()=> {
+            let x =y = 1;
+        })
+        
+        (()=> {
+            let x =y = 10;
+        })
+
+        console.log(y) */
+    </script>
+
+    <script>  
+        //44
+/*         var x = 100
+        (()=> {
+            var x = 10;
+        })
+        console.log(x)
+ */
+        // op: 100
+        //first console search it in their own scope console is in global so op is 100
+
+    </script>
+
+    <script>  
+        //45
+        // console.log(!true - true)
+
+        // op  -1
+        // explanation :  true 1 -ve of it is false means 0 and finally 0-1 = -1
+
+    </script>
+
+    <script>  
+        //46
+        console.warn(true +  + "10")
+
+        // op 11
+        // explanation : +convert +"10" into number and 1 + 10 is 11
+    </script>
 
 
 
