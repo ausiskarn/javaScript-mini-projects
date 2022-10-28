@@ -1,2 +1,15 @@
-// Given a number N. Your task is to check whether it is fascinating or not.
-// Fascinating Number: When a number(should contain 3 digits or more) is multiplied by 2 and 3 ,and when both these products are concatenated with the original number, then it results in all digits from 1 to 9 present exactly once.
+// Given an array Arr of size N, swap the Kth element from beginning with Kth element from end.
+
+const arr = [1, 2, 3, 4, 5, 6, 7, 8];
+const n = arr.length
+const p = 3
+const k = p-1
+
+function swapElement(arr,n,k){
+    const temp = arr[k]
+    arr[k] = arr[n-1-k];
+    arr[n-1-k] = temp;
+    return arr
+    
+}
+console.log(swapElement(arr,n,k))
