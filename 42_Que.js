@@ -1,2 +1,14 @@
-// Given two sorted arrays A and B of size M and N respectively. Each array may have some elements in common with the other array. Find the maximum sum of a path from the beginning of any array to the end of any of the two arrays. We can switch from one array to another array only at the common elements.Both the arrays are sorted.
-// Note: Only one repeated value is considered in the valid path sum.
+// 7. Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string.
+
+const noOfVowels = str => {
+    const vowel = 'aeiouAEIOU'
+    let a = vowel.length;
+    let count = 0;
+    for(let i=0;i<str.length;i++){
+        if(vowel.indexOf(str[i]) !== -1) {
+            count += 1;
+        }
+    }
+    return count
+}
+console.log(noOfVowels("The quick brown fox"))

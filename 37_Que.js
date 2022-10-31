@@ -1,3 +1,14 @@
-// Implement a Queue using an Array. Queries in the Queue are of the following type:
-// (i) 1 x   (a query of this type means  pushing 'x' into the queue)
-// (ii) 2     (a query of this type means to pop element from queue and print the poped element)
+// Write a JavaScript function that checks whether a passed string is palindrome or not?
+
+const checkPalindrome = str => {
+    const n=str.length
+    for(let i=0;i<n/2; i++){
+        if(str[i] != str[n-1-i]){
+            return `${str} is not Palindrome.`
+        }
+        else {
+            return `${str} is palindrome`
+        }
+    }
+}
+console.log(checkPalindrome("dad"))
