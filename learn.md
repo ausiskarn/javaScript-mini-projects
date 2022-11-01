@@ -86,3 +86,60 @@ const noOfVowels = str => {
 console.log(noOfVowels("The quick brown fox"))
 ```
 `8. Write a JavaScript function that accepts a number as a parameter and check the number is prime or not.`
+```
+const testnum = n => {
+    if(n===1){
+        return false;
+    }
+    else if(n===2){
+        return true;
+    }
+    else {
+        for(let i=2;i<n;i++){
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true
+    }
+}
+console.log(testnum(17))
+```
+`9. Write a JavaScript function which accepts an argument and returns the type. 
+
+Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.`
+```
+const typeFinder = a => {
+    let datatype = [Function,RegExp,Number,String,Boolean,Object],x;
+    let len = datatype.length
+    if(typeof(a) === "object" || typeof(a) === "function"){
+        for(x=0;x<len;x++){
+            if( a instanceof datatype[x]){
+                return datatype[x]
+            }
+        }
+    }
+    return typeof a
+}
+
+console.log(typeFinder(1))
+```
+`instance of: The instanceof operator tests the presence of constructor.prototype in object's prototype chain. `
+
+`10. Write a JavaScript function which returns the n rows by n columns identity matrix.`
+```
+const makingMatrix = num => {
+    for(let i=0;i<num;i++){
+        for(let j=0;j<num;j++){
+            if(i===j){
+                console.log(1)
+            }
+            else {
+                console.log(0)
+            }
+        }
+       console.log("________")
+    }
+}
+makingMatrix(4)
+```
