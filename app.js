@@ -1,25 +1,16 @@
-// Write a JavaScript function to convert an amount to coins.
+// 17. Write a JavaScript function to  get the number of occurrences of each letter in specified string.
 
-/* Sample function : amountTocoins(46, [25, 10, 5, 2, 1])
-Here 46 is the amount. and 25, 10, 5, 2, 1 are coins.
-Output : 25, 10, 10, 1 */
-function amountTocoins(amt, coins) {
-    let temp = []
 
-    if(amt===0){
-        return 0;
-    }
-    else {
-        if(amt>=coins[0]){
-            let left = (amt-coins[0])
-            return [coins[0]].concat(amountTocoins(left,coins));
-        }
-        else {
-            coins.shift();
-            return amountTocoins(amt,coins)
-        }
-    }
-
+function count(string) {
+  return string.split("").reduce(
+    (acc, el) => {
+      if(acc.hasOwnProperty(el))
+        acc[el]++;
+      else
+        acc[el] = 1;
+      return acc;
+    }, {}
+  )
 }
-
-console.log(amountTocoins(46, [25, 10, 5, 2, 1]))
+var data = count("thequickbrownfoxjumpsoverthelazydog");
+console.log(data);

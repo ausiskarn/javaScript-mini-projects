@@ -201,3 +201,59 @@ const findFactors = num => {
 }
 console.log(findFactors(15))
 ```
+`
+ 14. Write a JavaScript function to convert an amount to coins.
+`
+ Sample function : amountTocoins(46, [25, 10, 5, 2, 1])
+Here 46 is the amount. and 25, 10, 5, 2, 1 are coins.
+Output : 25, 10, 10, 1 
+```
+function amountTocoins(amt, coins) {
+    let temp = []
+
+    if(amt===0){
+        return 0;
+    }
+    else {
+        if(amt>=coins[0]){
+            let left = (amt-coins[0])
+            return [coins[0]].concat(amountTocoins(left,coins));
+        }
+        else {
+            coins.shift();
+            return amountTocoins(amt,coins)
+        }
+    }
+
+}
+
+console.log(amountTocoins(46, [25, 10, 5, 2, 1]))
+```
+`
+15. Write a JavaScript function to compute the value of bn where n is the exponent and b is the bases. Accept b and n from the user and display the result.
+`
+```
+const findNum = (base,exp) => {
+    let num = 1
+    for(let i=1;i<=exp;i++){
+        num *= base
+    }
+    return num;
+}
+console.log(findNum(2,3))
+```
+`16. Write a JavaScript function to extract unique characters from a string.`
+```
+const getUniqueString = string => {
+    let uniqueString = '';
+    for(let i=0;i<string.length;i++){
+        if(uniqueString.indexOf(string.charAt(i))==-1){
+            uniqueString += string[i]
+        }
+    }
+
+    return uniqueString
+}
+console.log(getUniqueString("hellodearhowareyou"))
+
+```
