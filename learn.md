@@ -251,9 +251,7 @@ const getUniqueString = string => {
             uniqueString += string[i]
         }
     }
-
     return uniqueString
 }
 console.log(getUniqueString("hellodearhowareyou"))
-
 ```
