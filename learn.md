@@ -105,7 +105,7 @@ const testnum = n => {
 }
 console.log(testnum(17))
 ```
-`9. Write a JavaScript function which accepts an argument and returns the type. 
+`9. Write a JavaScript function which accepts an argument and returns the type. `
 
 Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.`
 ```
@@ -254,4 +254,38 @@ const getUniqueString = string => {
     return uniqueString
 }
 console.log(getUniqueString("hellodearhowareyou"))
+```
+`19. Write a JavaScript function that returns array elements larger than a number.`
+
+```
+const getValue = (arr,num) => arr.filter(n => n>num);
+
+const arr = [2,35,6544,234,1232,56,342,2,3,4,55,]
+console.log(getValue(arr,50))
+```
+`// 20. Write a JavaScript function that generates a string id (specified length) of random characters. `
+```
+const getRandom = (str,u) => {
+    let newstr = '';
+    for(let i=0;i<u;i++){
+        newstr += str.charAt(Math.floor(Math.random()*str.length +1))
+    }
+    return newstr
+}
+myrandom = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+console.log(getRandom(myrandom,8))
+```
+`22. Write a JavaScript function that accepts two arguments, a string and a letter and the function will count the number of occurrences of the specified letter within the string. `
+```
+const occurrences = function (string, char) {
+    let counter =0;
+    for(let i = 0; i<string.length;i++){
+        if(char === string[i]){
+            counter++
+        }
+    }
+    console.log(counter)
+}
+
+console.log(occurrences("hello ;a ; la la ","l"))
 ```
