@@ -289,3 +289,24 @@ const occurrences = function (string, char) {
 
 console.log(occurrences("hello ;a ; la la ","l"))
 ```
+`23. Write a JavaScript function to find the first not repeated character. `
+```
+function getnorepeat(str){
+    const arr = str.split("")
+    let counter =0;
+    let result;
+
+    for(let i=0;i<str.length;i++){
+        counter = 0;
+        for(let j=0;j<str.length;j++){
+            if(arr[i]===arr[j]){
+                counter++
+            }
+        }
+        if(counter< 2){
+            console.log[i]
+        }
+    }
+}
+getnorepeat("aadefefekfefe")
+```

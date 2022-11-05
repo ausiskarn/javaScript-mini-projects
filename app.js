@@ -1,12 +1,6 @@
-let possibleCombination = str => {
-    // let combinations = [];
-    for(let i=0;i< str.length;i++){
-        for(let j=i+1;j<str.length +1; j++){
-            console.log(str.slice(i,j))
-        }
-        console.log("----")
-    }
-    console.log("+++++")
-    // return combinations;
+// 29. Write a JavaScript function to get the function name.
+
+const getfunctionname = () => {
+    return getfunctionname.name
 }
-console.log(possibleCombination("hello"));
+console.log(getfunctionname())
